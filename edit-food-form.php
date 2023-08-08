@@ -6,7 +6,7 @@ $row = mysqli_fetch_array($food_data); ?>
 
 <div class="container-fluid background-img">
     <div class="container login-container">
-        <form action="edit-food-query.php?id=<?php echo $row[" method="post">
+        <form action="edit-food-query.php?id=<?= $row['id']?>" method="post">
             <div class="add-food-form">
                 <div class="row-food">
                     <div class="col-md-6 food-modal-field">
@@ -27,7 +27,7 @@ $row = mysqli_fetch_array($food_data); ?>
                     </div>
                 </div>
                 <div class="col-md-12 food-modal-field">
-                    <label for="descriere"><b>Descriere:</b></label>
+                    <label for="description"><b>Description:</b></label>
                     <textarea name="description"><?php echo $row['description']; ?></textarea>
                 </div>
             </div>

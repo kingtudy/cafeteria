@@ -44,7 +44,7 @@ $food_data = mysqli_query($link, $query_food);
                                 <td class="middle-center-btn">
                                     <a class="btn btn-primary edit-food" href="javascript:void(0)" data-toggle="modal" data-target="#viewFoodEditList-<?php echo $row["id_food"]; ?>"><div class="icon-settings"><i class="fas fa-pencil-alt"></i></div></a>
                                     <?php include "widgets/modal-edit-food.php"; ?>
-                                    <a class="btn btn-primary delete-food" href="delete-food-query.php?id=<?php echo $row[" onclick="return deleteItemFood();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
+                                    <a class="btn btn-primary delete-food" href="delete-food-query.php?id=<?= $row['id']?>" onclick="return deleteItemFood();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
                                 </td>
                             </tr>
                 <?php   }

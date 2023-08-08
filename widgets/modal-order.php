@@ -35,7 +35,7 @@ $food_data = mysqli_query($link, $query_food);
                         </div>
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="descriere"><b>Descriere:</b></label>
+                                <label for="description"><b>Description:</b></label>
                                 <textarea name="description"></textarea>
                             </div>
                         </div>

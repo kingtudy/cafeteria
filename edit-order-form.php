@@ -21,7 +21,7 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
     <div class="container login-container">
         <div class="add-menu-form">
             <h5 class="modal-title" id="orderModalLabel">Modifica date comanda</h5>
-            <form action="edit-order-query.php?id=<?php echo $row[" method="post">
+            <form action="edit-order-query.php?id=<?= $row['id']?>" method="post">
                 <div class="modal-body">
                     <div class="add-menu-form">
                         <div class="row-food">
@@ -56,7 +56,7 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
                         </div>
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="descriere"><b>Descriere:</b></label>
+                                <label for="description"><b>Description:</b></label>
                                 <textarea name="description"><?php echo $row['order_desc'] ?></textarea>
                             </div>
                         </div>

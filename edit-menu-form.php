@@ -14,7 +14,7 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
 
 <div class="container-fluid background-img">
     <div class="container login-container">
-        <form action="edit-menu-query.php?id=<?php echo $row[" method="post">
+        <form action="edit-menu-query.php?id=<?= $row['id']?>" method="post">
             <div class="add-menu-form">
                 <div class="row-food">
                     <div class="col-md-12 food-modal-field">
@@ -24,7 +24,7 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
                 </div>
                 <div class="row-food">
                     <div class="col-md-12 food-modal-field">
-                        <label for="descriere"><b>Descriere:</b></label>
+                        <label for="description"><b>Description:</b></label>
                         <textarea name="description"><?php echo $row['description']; ?></textarea>
                     </div>
                 </div>

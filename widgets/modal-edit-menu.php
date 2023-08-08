@@ -28,7 +28,7 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
                         </div>
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="descriere"><b>Descriere:</b></label>
+                                <label for="description"><b>Description:</b></label>
                                 <textarea name="description"><?php echo $row['description']; ?></textarea>
                             </div>
                         </div>

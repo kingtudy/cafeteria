@@ -12,7 +12,7 @@
                     <div class="add-food-form">
                         <div class="row-food">
                             <div class="col-md-6 food-modal-field">
-                                <label for="nume"><b>Nume:</b></label>
+                                <label for="name"><b>Nume:</b></label>
                                 <input type="text" name="name" value="<?php echo $row['name']; ?>" required>
                             </div>
 
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 food-modal-field">
-                            <label for="descriere"><b>Descriere:</b></label>
+                            <label for="description"><b>Description:</b></label>
                             <textarea name="description"><?php echo $row['description']; ?></textarea>
                         </div>
                     </div>

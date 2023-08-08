@@ -1,5 +1,5 @@
 <div class="footer">
-    <?php #Footer scripts ?>
+    <?php #footer scripts ?>
     <script type="text/javascript">
         <?php include_once dirname(__DIR__) . "/res/js/jquery-3.6.0.min.js"; ?>
         <?php include_once dirname(__DIR__) . "/res/js/bootstrap.js"; ?>

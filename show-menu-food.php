@@ -38,8 +38,8 @@ $food_data = mysqli_query($link, $query_food);
                             <td class="data-table-content"><?php echo $row["description"]; ?></td>
                             <?php if($_SESSION["role"] === 'admin') { ?>
                             <td class="data-table-content">
-                                <a class="edit-food" href="edit-food-form.php?id=<?php echo $row[">Edit</a>
-                                <a class="delete-food" href="delete-food-query.php?id=<?php echo $row[" onclick="return deleteItemFood();">Delete</a>
+                                <a class="edit-food" href="edit-food-form.php?id=<?= $row['id']?>">Edit</a>
+                                <a class="delete-food" href="delete-food-query.php?id=<?= $row['id']?>" onclick="return deleteItemFood();">Delete</a>
                             </td>
                             <?php } ?>
                         </tr>

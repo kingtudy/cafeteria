@@ -7,7 +7,7 @@ $food_data = mysqli_query($link, $query_food);
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="menuModalLabel">Adauga meniu</h5>
+                <h5 class="modal-title" id="menuModalLabel">Add menu</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -17,13 +17,13 @@ $food_data = mysqli_query($link, $query_food);
                     <div class="add-menu-form">
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="nume"><b>Nume:</b></label>
+                                <label for="nume"><b>Menu name:</b></label>
                                 <input type="text" name="name" required>
                             </div>
                         </div>
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="descriere"><b>Descriere:</b></label>
+                                <label for="description"><b>Description:</b></label>
                                 <textarea name="description"></textarea>
                             </div>
                         </div>
