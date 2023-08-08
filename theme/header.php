@@ -29,9 +29,8 @@ error_reporting(E_ALL);
     ?>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!-- Aici vin incluse in site fisiere de css   -->
     <style type="text/css">
-        <?php include_once dirname(__DIR__) . "/res/css/bootstrap.min.css"; #include dirname este o comanda din php prin care imi iau calea catre fisier ?>
+        <?php include_once dirname(__DIR__) . "/res/css/bootstrap.min.css"; #includes a bunch of files ?>
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-grid.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-reboot.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/style.css"; ?>
