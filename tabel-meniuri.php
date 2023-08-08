@@ -65,7 +65,7 @@ $menu_data = mysqli_query($link, $query_menu);
                         <td class="middle-center-btn">
                             <a class="btn btn-primary edit-food" href="javascript:void(0)" data-toggle="modal" data-target="#viewMenuEditList-<?php echo $row["id_menu"]; ?>"><div class="icon-settings"><i class="fas fa-pencil-alt"></i></div></a>
                             <?php include "widgets/modal-edit-menu.php"; ?>
-                            <a class="btn btn-primary delete-food" href="delete-menu-query.php?id=<?php echo $row[" onclick="return deleteItemFood();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
+                            <a class="btn btn-primary delete-food" href="delete-menu-query.php?id=<?= $row['id']; ?>" onclick="return deleteItemFood();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
                         </td>
                     </tr>
                 <?php }

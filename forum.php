@@ -59,7 +59,7 @@ $forum_data = mysqli_query($link, $query_forum);
                                     </div>
                                     <p class="posted-by">Postat de: <b><?php echo $row["email_user"]; ?></b></p>
                                     <?php if($_SESSION["role"] === 'admin') { ?>
-                                        <a class="btn btn-primary btn-forum-delete" href="delete-forum-query.php?id=<?php echo $row[" onclick="return deleteItemForum();">
+                                        <a class="btn btn-primary btn-forum-delete" href="delete-forum-query.php?id=<?= $row['id']; ?>" onclick="return deleteItemForum();">
                                             <div class="icon-settings">
                                                 <i style="float: right" class="fas fa-trash-alt"></i>
                                             </div>

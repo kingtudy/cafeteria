@@ -5,7 +5,7 @@
         <?php include "widgets/navbar-student.php"; #imi afiseaza ce cod am inclus in widget(exact ca la includerea fisierelor de css si js)?>
         <div class="welcome-admin">
             <span class="text-welcome-admin">Welcome client !</span>
-            <img class="doodle" src="resmg/drink-doodle.png" alt="cookie">
+            <img class="doodle" src="res/img/drink-doodle.png" alt="cookie">
         </div>
     </div>
 </div>
