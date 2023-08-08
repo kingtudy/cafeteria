@@ -1,0 +1,99 @@
+drop database if exists mnotphqy_cafeteria;
+create database mnotphqy_cafeteria;
+use mnotphqy_cafeteria;
+
+drop table if exists users;
+CREATE TABLE users(
+  id_user int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  role VARCHAR(10) NOT NULL,
+  password VARCHAR(200) NOT NULL
+);
+
+drop table if exists menu;
+CREATE TABLE menu(
+  id_menu int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  monday BIT,
+  tuesday BIT,
+  wednesday BIT,
+  thursday BIT,
+  friday BIT,
+  saturday BIT,
+  sunday BIT,
+  fasting BIT,
+  vegetarian BIT,
+  description TEXT
+);
+
+drop table if exists food;
+CREATE TABLE food(
+  id_food int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  type VARCHAR(50) NOT NULL,
+  price FLOAT NOT NULL,
+  id_menu int unsigned,
+  description TEXT
+);
+
+drop table if exists food_on_the_menu;
+CREATE TABLE food_on_the_menu(
+  id_menu int unsigned NOT NULL,
+  id_food int unsigned NOT NULL
+);
+
+drop table if exists forum;
+CREATE TABLE forum(
+  id_message int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  title TEXT,
+  email_user TEXT,
+  content TEXT
+);
+
+drop table if exists supply;
+CREATE TABLE supply(
+  id_supply int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name TEXT,
+  qty TEXT,
+  supplier TEXT,
+  notes TEXT
+);
+
+drop table if exists questions;
+CREATE TABLE questions(
+  id_question int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  question TEXT,
+  ans1 TEXT,
+  ans2 TEXT,
+  ans3 TEXT,
+  ans1_cont INT DEFAULT 0,
+  ans2_cont INT DEFAULT 0,
+  ans3_cont INT DEFAULT 0
+);
+
+drop table if exists order_data;
+CREATE TABLE order_data(
+  id_order int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  order_date DATE,
+  status_id int,
+  order_email TEXT,
+  order_desc TEXT
+);
+
+drop table if exists order_food;
+CREATE TABLE order_food(
+  id_order int,
+  id_food int
+);
+
+drop table if exists status;
+CREATE TABLE status(
+  status_id int unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  status TEXT
+);
+
+insert into status(status_id, status) values (1, "CANCELED");
+insert into status(status_id, status) values (2, "SENT");
+insert into status(status_id, status) values (3, "READY");
+insert into status(status_id, status) values (4, "FINISHED");
