@@ -4,7 +4,7 @@ require_once "sys.php";
 $id_question=$_REQUEST['id'];
 
 if (!isset($id_question)){
-    echo "Eroare stergere<br />";
+    echo "Delete error<br />";
     exit;
 }
 

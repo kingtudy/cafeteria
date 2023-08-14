@@ -9,17 +9,19 @@ $tue=$_POST['tuesday'];
 $wed=$_POST['wednesday'];
 $thu=$_POST['thursday'];
 $fri=$_POST['friday'];
+$sat=$_POST['saturday'];
+$sun=$_POST['sunday'];
 $description=$_POST['description'];
 $fas=$_POST['fasting'];
 $veg=$_POST['vegetarian'];
 $food_list=$_POST['food_list'];
 
 if (!isset($name)){
-    echo "Nu ai completat numele mancarii<br />";
+    echo "Food name missing<br />";
     exit;
 }
 
-$query = 'update menu set name="' . $name . '", monday=' . $mon . ', tuesday=' . $tue . ', wednesday=' . $wed . ', thursday=' . $thu . ', friday=' . $fri . ', description="' . $description . '", fasting=' . $fas . ', vegetarian=' . $veg . ' where id_menu=' . $id_menu . ';';
+$query = 'update menu set name="' . $name . '", monday=' . $mon . ', tuesday=' . $tue . ', wednesday=' . $wed . ', thursday=' . $thu . ', friday=' . $fri . ', saturday=' . $sat . ', sunday=' . $sun . ', description="' . $description . '", fasting=' . $fas . ', vegetarian=' . $veg . ' where id_menu=' . $id_menu . ';';
 
 $result = $link->query($query);
 
@@ -33,7 +35,7 @@ foreach($food_list as $v) {
 
 mysqli_close($link);
 
-header("location: tabel-meniuri.php");
+header("location: menu-table.php");
 exit;
 
 ?>

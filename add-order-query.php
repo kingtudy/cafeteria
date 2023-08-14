@@ -7,7 +7,7 @@ $date=$_POST['date'];
 $food_list=$_POST['food_list'];
 
 if (!isset($food_list)){
-    echo "Nu ai adaugat mancare la comanda<br />";
+    echo "Food not added in order<br />";
     exit;
 }
 

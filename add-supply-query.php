@@ -7,15 +7,15 @@ $supplier=$_POST['supplier'];
 $notes=$_POST['notes'];
 
 if (!isset($name)){
-    echo "Nu ai completat numele<br />";
+    echo "Name missing<br />";
     exit;
 }
 if(!isset($qty)) {
-    echo "Nu ai completat cantitatea<br />";
+    echo "Qty missing<br />";
     exit;
 }
 if(!isset($supplier)) {
-    echo "Nu ai completat furnizorul<br />";
+    echo "Supplier missing<br />";
     exit;
 }
 
@@ -25,5 +25,5 @@ $result = $link->query($query);
 
 mysqli_close($link);
 
-header("location: aprovizionare.php");
+header("location: supplier.php");
 exit;

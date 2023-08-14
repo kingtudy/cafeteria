@@ -18,5 +18,5 @@ $result = $link->query($query2);
 
 mysqli_close($link);
 
-header("location: tabel-meniuri.php");
+header("location: menu-table.php");
 exit;

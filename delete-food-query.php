@@ -4,7 +4,7 @@ require_once "sys.php";
 $id_food=$_REQUEST['id'];
 
 if (!isset($id_food)){
-    echo "Eroare stergere<br />";
+    echo "Delete error<br />";
     exit;
 }
 

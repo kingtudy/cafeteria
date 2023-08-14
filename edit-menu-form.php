@@ -1,6 +1,6 @@
 <?php include "theme/header.php";
 include "sys.php";
-$query_menu = 'select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where id_menu=('.$_REQUEST["id"].');';
+$query_menu = 'select id_menu, name, monday, tuesday, wednesday, thursday, friday, saturday, sunday, fasting, vegetarian, description from menu where id_menu=('.$_REQUEST["id"].');';
 $menu_data = mysqli_query($link, $query_menu);
 $row = mysqli_fetch_array($menu_data);
 $query_food = "select id_food, name from food;";
@@ -18,7 +18,7 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
             <div class="add-menu-form">
                 <div class="row-food">
                     <div class="col-md-12 food-modal-field">
-                        <label for="nume"><b>Nume:</b></label>
+                        <label for="nume"><b>Name:</b></label>
                         <input type="text" name="name" value="<?php echo $row['name']; ?>" required>
                     </div>
                 </div>
@@ -31,48 +31,58 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
 
                 <div class="row-food" style="flex-direction: column;">
                     <div class="col-md-12 menu-modal-field">
-                        <label for="luni"><b>Luni </b></label>
+                        <label for="monday"><b>Monday </b></label>
                         <input type="hidden" name="monday" value="0">
                         <input type="checkbox" name="monday" value="1" <?php if($row['monday']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="marti"><b>Marti </b></label>
+                        <label for="tuesday"><b>Tuesday </b></label>
                         <input type="hidden" name="tuesday" value="0">
                         <input type="checkbox" name="tuesday" value="1" <?php if($row['tuesday']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="miercuri"><b>Miercuri </b></label>
+                        <label for="wednesday"><b>Wednesday </b></label>
                         <input type="hidden" name="wednesday" value="0">
                         <input type="checkbox" name="wednesday" value="1" <?php if($row['wednesday']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="joi"><b>Joi </b></label>
+                        <label for="thursday"><b>Thursday </b></label>
                         <input type="hidden" name="thursday" value="0">
                         <input type="checkbox" name="thursday" value="1" <?php if($row['thursday']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="vineri"><b>Vineri </b></label>
+                        <label for="friday"><b>Friday </b></label>
                         <input type="hidden" name="friday" value="0">
                         <input type="checkbox" name="friday" value="1" <?php if($row['friday']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="de_post"><b>De post </b></label>
+                        <label for="saturday"><b>Saturday </b></label>
+                        <input type="hidden" name="saturday" value="0">
+                        <input type="checkbox" name="saturday" value="1" <?php if($row['saturday']) echo 'checked'; ?>>
+                    </div>
+                    <div class="col-md-12 menu-modal-field">
+                        <label for="sunday"><b>Sunday </b></label>
+                        <input type="hidden" name="sunday" value="0">
+                        <input type="checkbox" name="sunday" value="1" <?php if($row['sunday']) echo 'checked'; ?>>
+                    </div>
+                    <div class="col-md-12 menu-modal-field">
+                        <label for="de_post"><b>Fasting </b></label>
                         <input type="hidden" name="fasting" value="0">
                         <input type="checkbox" name="fasting" value="1" <?php if($row['fasting']) echo 'checked'; ?>>
                     </div>
                     <div class="col-md-12 menu-modal-field">
-                        <label for="vegetarieni"><b>Pentru vegetarieni </b></label>
+                        <label for="vegetarians"><b>For vegetarians </b></label>
                         <input type="hidden" name="vegetarian" value="0">
                         <input type="checkbox" name="vegetarian" value="1" <?php if($row['vegetarian']) echo 'checked'; ?>>
                     </div>
                 </div>
                 <div class="row-food">
                     <div class="col-md-12 food-modal-field">
-                        <label><b>Editeaza mancaruri:</b></label>
-                        <select data-placeholder="Lista mancaruri" multiple="multiple" class="js-example-basic-multiple" name="food_list[]" values="" required>
+                        <label><b>Edit food:</b></label>
+                        <select data-placeholder="Food list" multiple="multiple" class="js-example-basic-multiple" name="food_list[]" values="" required>
                             <?php if (mysqli_num_rows($food_data) > 0) {
                                 while($value = mysqli_fetch_array($food_data)) { ?>
-                                    <option value="<?php echo $value['id_food'] . '"'; if(in_array($value['id_food'], $construct_array)) { echo "selected"; }?>><?php echo $value['name']; ?></option>
+                                    <option value="<?php echo $value['id_food'] . '"'; if(in_array($value['id_food'], $construct_array)) { echo "selected"; }?>"><?php echo $value['name']; ?></option>
                                 <?php }
                             } ?>
                         </select>
@@ -80,7 +90,7 @@ while($data = mysqli_fetch_array($food_on_the_menu_data)) {
                 </div>
             </div>
             <div class="edit-food-btn">
-                <button class="btn btn-primary" type="submit">Salveaza modificarile</button>
+                <button class="btn btn-primary" type="submit">Save</button>
             </div>
         </form>
     </div>

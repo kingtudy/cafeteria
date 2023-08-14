@@ -29,13 +29,14 @@
                         <input type="password" placeholder="Password" name="pass" id="myPassword" required>
                         <a class="see-password" onclick="showPassword()"><i style="color:white;" class="fas fa-eye"></i></a>
                     </div>
+                </div>
+                <div class="demo-data">
                     <div class="wrap-buttons-login">
                         <p style="color:white;">DEMO(click to copy):</p>
                     </div>
                     <div class="wrap-temp-login-data">
                         <p style="color:white;"><i><span id="register_mail_text">user: </span><a id="register_mail" href="#" onclick="clipboard('#register_mail','#register_mail_text');">tudor1103@gmail.com</a> | <span id="register_pass_text">pass: </span><a id="register_pass" href="#" onclick="clipboard('#register_pass','#register_pass_text');">11C@feteri@03</a></i></p>
                     </div>
-
                     <div class="wrap-buttons-login">
                         <button class="btn-login btn btn-primary" type="submit">Login</button>
                     </div>

@@ -14,5 +14,5 @@ $result = $link->query($query);
 
 mysqli_close($link);
 
-header("location: aprovizionare.php");
+header("location: supplier.php");
 exit;

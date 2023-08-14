@@ -7,7 +7,7 @@ $ans2=$_POST['ans2'];
 $ans3=$_POST['ans3'];
 
 if (!isset($question)){
-    echo "Nu ai completat cu intrebare<br />";
+    echo "Question not completed<br />";
     exit;
 }
 

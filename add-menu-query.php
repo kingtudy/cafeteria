@@ -8,16 +8,18 @@ $tue=$_POST['tuesday'];
 $wed=$_POST['wednesday'];
 $thu=$_POST['thursday'];
 $fri=$_POST['friday'];
+$sat=$_POST['saturday'];
+$sun=$_POST['sunday'];
 $fas=$_POST['fasting'];
 $veg=$_POST['vegetarian'];
 $food_list=$_POST['food_list'];
 
 if (!isset($name)){
-    echo "Nu ai completat numele mancarii<br />";
+    echo "Food name missing<br />";
     exit;
 }
 
-$query1 = "insert into menu(name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description) values ('".$name."', ".$mon.", ".$tue.", ".$wed.", ".$thu.", ".$fri.", ".$fas.", ".$veg.", '".$description."');";
+$query1 = "insert into menu(name, monday, tuesday, wednesday, thursday, friday, saturday, sunday, fasting, vegetarian, description) values ('".$name."', ".$mon.", ".$tue.", ".$wed.", ".$thu.", ".$fri.", ".$sat.", ".$sun.", ".$fas.", ".$veg.", '".$description."');";
 
 $result = $link->query($query1);
 
@@ -33,5 +35,5 @@ foreach($food_list as $v) {
 
 mysqli_close($link);
 
-header("location: tabel-meniuri.php");
+header("location: menu-table.php");
 exit;

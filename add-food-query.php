@@ -4,7 +4,6 @@ require_once "sys.php";
 $name=$_POST['name'];
 $type=$_POST['type'];
 $price=$_POST['price'];
-//$menu=$_POST['menu'];
 $description=$_POST['description'];
 
 if (!isset($name)){

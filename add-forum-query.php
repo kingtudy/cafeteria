@@ -6,11 +6,11 @@ $content=$_POST['content'];
 $user_id=$_POST['userid'];
 
 if (!isset($title)){
-    echo "Nu ai completat titlul<br />";
+    echo "Title not added<br />";
     exit;
 }
 if(!isset($content)) {
-    echo "Nu ai completat continutul<br />";
+    echo "Content not added<br />";
     exit;
 }
 

@@ -5,11 +5,11 @@ foreach($_REQUEST as $k => $v) {
     $id_question=$k;
     $answer=$v;
     if (!isset($id_question)){
-        echo "Nu s-a primit intrebarea<br />";
+        echo "question missing<br />";
         exit;
     }
     if(!isset($answer)) {
-        echo "Nu s-a primit raspunsul<br />";
+        echo "answer missing<br />";
         exit;
     }
 

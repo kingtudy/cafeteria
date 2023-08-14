@@ -1,26 +1,22 @@
 <?php
 require_once "sys.php";
 
-//$_POST este folosit pentru a prelua variabilele dintr-un formular
-//$_REQUEST este folosit pentru a prelua variabilele dintr-un link
-
 $id_food = $_REQUEST['id'];
 $name = $_POST['name'];
 $type = $_POST['type'];
 $price = $_POST['price'];
-//$menu = $_POST['menu'];
 $description = $_POST['description'];
 
 if (!isset($name)) {
-    echo "Nu ai completat numele mancarii<br />";
+    echo "Food name missing<br />";
     exit;
 }
 if (!isset($type)) {
-    echo "Nu ai completat tipul<br />";
+    echo "Food type missing<br />";
     exit;
 }
 if ($price <= 0) {
-    echo "Nu ai completat pretul<br />";
+    echo "Food price missing<br />";
     exit;
 }
 

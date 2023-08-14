@@ -5,10 +5,10 @@
     <div class="collapse navbar-collapse justify-content-md-center" id="nav-cantina">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="tabel-meniuri.php">CAFETERIA MANAGEMENT <i class="fas fa-utensils navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="menu-table.php">CAFETERIA MANAGEMENT <i class="fas fa-utensils navbar-ico"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="aprovizionare.php">SUPPLY <i class="fas fa-truck navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="supplier.php">SUPPLIER <i class="fas fa-truck navbar-ico"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link navbar-elem" href="forum.php">FORUM <i class="fas fa-user-graduate navbar-ico"></i></a>
