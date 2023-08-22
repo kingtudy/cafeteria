@@ -8,7 +8,7 @@
                 <a class="nav-link back-btn" href="index_admin.php"><i class="fas fa-arrow-circle-left"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="forum.php">FORUM STUDENTI <i class="fas fa-user-graduate navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="forum.php">CLIENTS FORUM <i class="fas fa-user-graduate navbar-ico"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link navbar-elem" href="questions.php">ASAMBLARE CHESTIONAR <i class="fas fa-cogs navbar-ico"></i></a>

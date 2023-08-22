@@ -20,13 +20,13 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
 <div class="container-fluid background-img">
     <div class="container login-container">
         <div class="add-menu-form">
-            <h5 class="modal-title" id="orderModalLabel">Modifica date comanda</h5>
+            <h5 class="modal-title" id="orderModalLabel">Edit order data</h5>
             <form action="edit-order-query.php?id=<?= $row['id']?>" method="post">
                 <div class="modal-body">
                     <div class="add-menu-form">
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="date"><b>Data:</b></label>
+                                <label for="date"><b>Order date:</b></label>
                                 <input type="date" name="date" value="<?php echo $row['order_date']; ?>" required>
                             </div>
                         </div>
@@ -44,11 +44,11 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
                         </div>
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label><b>Adauga mancaruri:</b></label>
+                                <label><b>Add food:</b></label>
                                 <select data-placeholder="Lista mancaruri" multiple="multiple" class="js-example-basic-multiple" name="food_list[]" required>
                                     <?php if (mysqli_num_rows($food_data) > 0) {
                                         while($value = mysqli_fetch_array($food_data)) { ?>
-                                            <option value="<?php echo $value['id_food'] . '"'; if(in_array($value['id_food'], $construct_array)) { echo "selected"; }?>> <?php echo $value['name']; ?></option>
+                                            <option value="<?php echo $value['id_food'] . '"'; if(in_array($value['id_food'], $construct_array)) { echo "selected"; }?>"> <?php echo $value['name']; ?></option>
                                         <?php }
                                     } ?>
                                 </select>
@@ -64,7 +64,7 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" type="submit">Salveaza modificarile</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
                 </div>
             </form>
         </div>

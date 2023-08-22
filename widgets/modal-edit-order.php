@@ -50,11 +50,11 @@ while($data = mysqli_fetch_array($query_order_food_data)) {
                             </div>
                             <div class="row-food">
                                 <div class="col-md-12 food-modal-field">
-                                    <label><b>Adauga mancaruri:</b></label>
+                                    <label><b>Add food:</b></label>
                                     <select data-placeholder="Lista mancaruri" multiple="multiple" class="js-example-basic-multiple" name="food_list[]" required>
                                         <?php if (mysqli_num_rows($food_data) > 0) {
                                         while($value = mysqli_fetch_array($food_data)) { ?>
-                                            <option value="<?php echo $value['id_food'] . '"'; if(in_array($value['id_food'], $construct_array)) { echo "selected"; }?>> <?php echo $value['name']; ?></option>
+                                            <option value="<?= $value['id_food']; ?>"<?php if(in_array($value['id_food'], $construct_array)) { echo " selected"; }?> > <?php echo $value['name']; ?></option>
                                         <?php }
                                         } ?>
                                 </select>

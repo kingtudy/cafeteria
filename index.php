@@ -34,8 +34,29 @@
                     <div class="wrap-buttons-login">
                         <p style="color:white;">DEMO(click to copy):</p>
                     </div>
+                    <div class="text-white wrap-temp-login-data">Admin:</div>
                     <div class="wrap-temp-login-data">
-                        <p style="color:white;"><i><span id="register_mail_text">user: </span><a id="register_mail" href="#" onclick="clipboard('#register_mail','#register_mail_text');">tudor1103@gmail.com</a> | <span id="register_pass_text">pass: </span><a id="register_pass" href="#" onclick="clipboard('#register_pass','#register_pass_text');">11C@feteri@03</a></i></p>
+                        <p class="text-white">
+                            <i>
+                                <span id="register_mail_text_admin">user: </span>
+                                <a id="register_mail_admin" href="#" onclick="clipboard('#register_mail_admin','#register_mail_text_admin');">admin@sophirion.com</a>
+                                |
+                                <span id="register_pass_text_admin">pass: </span>
+                                <a id="register_pass_admin" href="#" onclick="clipboard('#register_pass_admin','#register_pass_text_admin');">11C@feteri@03</a>
+                            </i>
+                        </p>
+                    </div>
+                    <div class="text-white wrap-temp-login-data">Client:</div>
+                    <div class="wrap-temp-login-data">
+                        <p class="text-white">
+                            <i>
+                                <span id="register_mail_text_client">user: </span>
+                                <a id="register_mail_client" href="#" onclick="clipboard('#register_mail_client','#register_mail_text_client');">client@sophirion.com</a>
+                                |
+                                <span id="register_pass_text_client">pass: </span>
+                                <a id="register_pass_client" href="#" onclick="clipboard('#register_pass_client','#register_pass_text_client');">!Client1234</a>
+                            </i>
+                        </p>
                     </div>
                     <div class="wrap-buttons-login">
                         <button class="btn-login btn btn-primary" type="submit">Login</button>

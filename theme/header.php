@@ -3,6 +3,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+include_once "functions.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +32,7 @@ error_reporting(E_ALL);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <style type="text/css">
-        <?php include_once dirname(__DIR__) . "/res/css/bootstrap.min.css"; #includes a bunch of files ?>
+        <?php include_once dirname(__DIR__) . "/res/css/bootstrap.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-grid.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-reboot.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/style.css"; ?>
