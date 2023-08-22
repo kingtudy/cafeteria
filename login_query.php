@@ -5,7 +5,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     if($_SESSION["role"] === 'admin') {
         header("location: index_admin.php");
         exit;
-    } else if($_SESSION["role"] === 'student') {
+    } else if($_SESSION["role"] === 'client') {
         header("location: index_client.php");
         exit;
     } else {
@@ -40,7 +40,6 @@ $email = $pass = $email_err = $pass_err = $login_err = "";
 
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
-
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     mysqli_stmt_bind_result($stmt, $user_id, $email, $name, $role, $hashed_pass);
                     if(mysqli_stmt_fetch($stmt)){

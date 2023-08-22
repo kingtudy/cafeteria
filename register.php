@@ -21,7 +21,7 @@
                     <label for="perm"><b>Tip cont:</b></label>
                     <select name="perm" required>
                             <option value="">-</option>
-                            <option value="student">Client</option>
+                            <option value="client">Client</option>
                             <option value="admin">Admin</option>
                     </select>
 
