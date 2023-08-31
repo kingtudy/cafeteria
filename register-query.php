@@ -7,28 +7,28 @@ $password=$_POST['pass'];
 $perm=$_POST['perm'];
 
 if (!isset($name)){
-    echo "Nu ai completat numele<br />";
+    echo "Name not found<br />";
     exit;
 }
 if(!isset($email)) {
-    echo "Nu ai completat adresa de email<br />";
+    echo "Mail not found<br />";
     exit;
 }
 
 if(!isset($password)) {
-    echo "Nu ai completat parola<br />";
+    echo "Password not found<br />";
     exit;
 }
 
 if(!isset($perm)) {
-    echo "Nu ai selectat permisiunea<br />";
+    echo "Permission not found<br />";
     exit;
 }
 
 $query_duplicate_mail = "select email from users where email = '".$email."'";
 $result = mysqli_query($link, $query_duplicate_mail);
 if(mysqli_num_rows($result) > 0) {
-    echo "Mail deja folosit<br />";
+    echo "Mail already added<br />";
     exit;
 } else {
     $query = "insert users (name,email,role,password) values ('".$name."', '".$email."', '".$perm."', '".password_hash($password, PASSWORD_DEFAULT)."');";
@@ -39,7 +39,7 @@ mysqli_close($link);
 ?>
 
 <script type="text/javascript">
-    alert("Cont creat cu succes");
+    alert("Account successfully created");
 </script>
 
 <?php

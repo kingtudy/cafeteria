@@ -13,7 +13,7 @@ if($_SESSION["role"] === 'admin') { ?>
         <?php if($_SESSION["role"] === 'admin') {
             include "widgets/navbar-admin.php";
         } else {
-            include "widgets/navbar-student.php";
+            include "widgets/navbar-client.php";
         } ?>
         <div class="top-table">
             <span class="add-shadow table-title">Tabela comenzi</span>

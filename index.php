@@ -46,7 +46,7 @@
                             </i>
                         </p>
                     </div>
-                    <div class="text-white wrap-temp-login-data">Client:</div>
+                    <div class="text-white   wrap-temp-login-data">Client:</div>
                     <div class="wrap-temp-login-data">
                         <p class="text-white">
                             <i>

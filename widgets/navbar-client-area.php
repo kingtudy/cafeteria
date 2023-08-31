@@ -11,10 +11,10 @@
                 <a class="nav-link navbar-elem" href="forum.php">CLIENTS FORUM <i class="fas fa-user-graduate navbar-ico"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="questions.php">ASAMBLARE CHESTIONAR <i class="fas fa-cogs navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="questions.php">QUESTIONNAIRE ASSEMBLY <i class="fas fa-cogs navbar-ico"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="answers.php">REZULTATE CHESTIONAR <i class="fas fa-clipboard-check navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="answers.php">QUESTIONNAIRE RESULTS <i class="fas fa-clipboard-check navbar-ico"></i></a>
             </li>
         </ul>
     </div>

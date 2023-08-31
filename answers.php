@@ -11,7 +11,7 @@ $questions_data = mysqli_query($link, $query_questions);
 <div class="container-fluid background-img">
     <div class="container-fluid background-img">
         <div class="container">
-            <?php include "widgets/navbar-student-area.php"; ?>
+            <?php include "widgets/navbar-client-area.php"; ?>
             <div class="main-body p-0">
                 <div class="inner-main">
                     <div class="inner-main-body p-2 p-sm-3 collapse forum-content show">

@@ -7,6 +7,10 @@ body, html {
     width: 100%;
 }
 
+select{
+    height: 30px;
+}
+
 .background-img-stud {
     background-image: url('res/img/tile_food.png');
     /*background-image: url('res/img/background_stud_2.jpg');*/

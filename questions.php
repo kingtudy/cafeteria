@@ -13,9 +13,9 @@ $questions_data = mysqli_query($link, $query_questions);
     <div class="container-fluid background-img">
         <div class="container">
             <?php if($_SESSION["role"] === 'admin') {
-                include "widgets/navbar-student-area.php";
+                include "widgets/navbar-client-area.php";
             } else {
-                include "widgets/navbar-student.php";
+                include "widgets/navbar-client.php";
             } ?>
 
             <div class="main-body p-0">

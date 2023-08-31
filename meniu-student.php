@@ -1,25 +1,50 @@
 <?php include_once "theme/header.php";
 include_once "sys.php";
-#date("l") -> asta imi scoate ziua saptamanii
-if(date("l")=="Monday") {
-    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where monday=1;";
-} else if(date("l")=="Tuesday") {
-    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where tuesday=1;";
-} else if(date("l")=="Wednesday") {
-    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where wednesday=1;";
-} else if(date("l")=="Thursday") {
-    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where thursday=1;";
-} else {
-    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where friday=1;";
+
+switch (date("l")) {
+    case "Monday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where monday=1;";
+        break;
+    case "Tuesday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where tuesday=1;";
+        break;
+    case "Wednesday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where wednesday=1;";
+        break;
+    case "Thursday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where thursday=1;";
+        break;
+    case "Friday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where friday=1;";
+        break;
+    case "Saturday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where saturday=1;";
+        break;
+    case "Sunday":
+        $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where sunday=1;";
+        break;
 }
 
-$menu_data = mysqli_query($link, $query_menu); #aici se face interogarea propiuzisa
+
+//if(date("l")=="Monday") {
+//    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where monday=1;";
+//} else if(date("l")=="Tuesday") {
+//    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where tuesday=1;";
+//} else if(date("l")=="Wednesday") {
+//    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where wednesday=1;";
+//} else if(date("l")=="Thursday") {
+//    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where thursday=1;";
+//} else {
+//    $query_menu = "select id_menu, name, monday, tuesday, wednesday, thursday, friday, fasting, vegetarian, description from menu where friday=1;";
+//}
+
+$menu_data = mysqli_query($link, $query_menu);
 ?>
 <div class="container-fluid background-img-stud">
     <div class="container">
-        <?php include "widgets/navbar-student.php"; ?>
+        <?php include "widgets/navbar-client.php"; ?>
         <div class="top-table">
-            <span class="add-shadow table-title">Tabela cu meniuri</span>
+            <span class="add-shadow table-title">Food menu</span>
         </div>
         <?php if(mysqli_num_rows($menu_data) > 0) { ?>
             <table class="table table-bordered table-hover table-mancare">

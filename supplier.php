@@ -1,7 +1,7 @@
 <?php include_once "theme/header.php";
 include_once "widgets/modal-add-supply.php";
 include_once "sys.php";
-//Scos din baza toate mancarurile
+
 $query_supply = "select id_supply, name, qty, supplier, notes from supply;";
 $supply_data = mysqli_query($link, $query_supply);
 ?>
@@ -51,7 +51,7 @@ $supply_data = mysqli_query($link, $query_supply);
                 </tbody>
             </table>
         <?php } else { ?>
-            <h1 class="add-shadow table-no-data">Data not added.</h1>
+            <h1 class="add-shadow table-no-data">Data not added</h1>
         <?php } ?>
     </div>
 </div>

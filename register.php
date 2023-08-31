@@ -15,10 +15,10 @@
                     <label for="email"><b>Email:</b></label>
                     <input type="email" placeholder="client@gmail.ro" name="email" required>
 
-                    <label for="pass"><b>Parola:</b></label>
+                    <label for="pass"><b>Password:</b></label>
                     <input type="password" placeholder="Password" name="pass" required>
 
-                    <label for="perm"><b>Tip cont:</b></label>
+                    <label for="perm"><b>Account type:</b></label>
                     <select name="perm" required>
                             <option value="">-</option>
                             <option value="client">Client</option>
