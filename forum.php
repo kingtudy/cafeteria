@@ -9,7 +9,7 @@ if(isset($_REQUEST['page'])) {
     $page = 1;
 }
 
-$numberOfPostsPerPage = 10; ///Numarul de afisari pe pagina
+$numberOfPostsPerPage = 10;
 $offset = ($page-1) * $numberOfPostsPerPage;
 
 $total_pages = "SELECT COUNT(*) FROM forum";
@@ -39,7 +39,7 @@ $forum_data = mysqli_query($link, $query_forum);
                 <div class="inner-sidebar">
                     <div class="inner-sidebar-header justify-content-center">
                         <button class="btn btn-primary button-forum btn-block" type="button" data-toggle="modal" data-target="#forumModal">
-                            Discutie noua
+                            New discussion
                         </button>
                     </div>
                 </div>
@@ -57,9 +57,9 @@ $forum_data = mysqli_query($link, $query_forum);
                                             <p class="text-secondary"><?php echo $row["content"]; ?></p>
                                         </div>
                                     </div>
-                                    <p class="posted-by">Postat de: <b><?php echo $row["email_user"]; ?></b></p>
+                                    <p class="posted-by">Posted by: <b><?php echo $row["email_user"]; ?></b></p>
                                     <?php if($_SESSION["role"] === 'admin') { ?>
-                                        <a class="btn btn-primary btn-forum-delete" href="delete-forum-query.php?id=<?= $row['id']; ?>" onclick="return deleteItemForum();">
+                                        <a class="btn btn-primary btn-forum-delete" href="delete-forum-query.php?id=<?= $row['id_message']; ?>" onclick="return deleteItemForum();">
                                             <div class="icon-settings">
                                                 <i style="float: right" class="fas fa-trash-alt"></i>
                                             </div>

@@ -36,6 +36,7 @@ include_once "functions.php";
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-grid.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/bootstrap-reboot.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/style.css"; ?>
+        <?php include_once dirname(__DIR__) . "/res/css/responsive.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/css/select2.min.css"; ?>
         <?php include_once dirname(__DIR__) . "/res/fontawesome/css/all.min.css"; ?>
     </style>

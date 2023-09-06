@@ -8,13 +8,13 @@
                 <a class="nav-link back-btn" href="index.php"><i class="fas fa-arrow-circle-left"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="tabel-meniuri.php">TABEL MENIURI <i class="far fa-list-alt navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="menu-table.php">MENU TABLE <i class="far fa-list-alt navbar-ico"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="table-food.php">TABEL MANCARURI <i class="fas fa-hamburger navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="table-food.php">FOOD TABLE <i class="fas fa-hamburger navbar-ico"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link navbar-elem" href="add-orar.php">PROGRAM CANTINA <i class="far fa-calendar-alt navbar-ico"></i></a>
+                <a class="nav-link navbar-elem" href="add-schedule.php">CAFETERIA SCHEDULE <i class="far fa-calendar-alt navbar-ico"></i></a>
             </li>
         </ul>
     </div>

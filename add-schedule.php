@@ -11,7 +11,7 @@
             </form>
         </div>
         <div class="orar_cantina">
-            <img src="respload/orar.jpeg" alt="orar">
+            <img src="res/upload/schedule.jpg" alt="schedule">
         </div>
     </div>
 </div>

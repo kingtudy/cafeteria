@@ -2,7 +2,7 @@
     <div class="modal-dialog show-food-modal" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="viewFoodEditList">Editare mancare</h5>
+                <h5 class="modal-title" id="viewFoodEditList">Edit food</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,19 +12,19 @@
                     <div class="add-food-form">
                         <div class="row-food">
                             <div class="col-md-6 food-modal-field">
-                                <label for="name"><b>Nume:</b></label>
+                                <label for="name"><b>Name:</b></label>
                                 <input type="text" name="name" value="<?php echo $row['name']; ?>" required>
                             </div>
 
                             <div class="col-md-6 food-modal-field">
-                                <label for="tip"><b>Tip:</b></label>
+                                <label for="tip"><b>Type:</b></label>
                                 <input type="text" name="type" value="<?php echo $row['type']; ?>" required>
                             </div>
                         </div>
 
                         <div class="row-food">
                             <div class="col-md-12 food-modal-field">
-                                <label for="pret"><b>Pret:</b></label>
+                                <label for="pret"><b>Price:</b></label>
                                 <input type="text" name="price" value="<?php echo $row['price']; ?>" required>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="edit-food-btn">
-                        <button class="btn btn-primary" type="submit">Salveaza modificarile</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
                     </div>
                 </form>
             </div>

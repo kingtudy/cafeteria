@@ -1,0 +1,35 @@
+@media only screen and (max-width: 768px) {
+    .main-index-container {
+        padding: 0px !important;
+    }
+    .login-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 0;
+    }
+    .login-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo-login-left, .logo-login-right {
+        top: 0;
+    }
+    .login-form {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .demo-data {
+        padding: 0 5px;
+    }
+    .welcome-admin {
+        margin-top: 6em;
+    }
+    .text-welcome-admin {
+        font-size: 35px;
+        text-align: center;
+    }
+}

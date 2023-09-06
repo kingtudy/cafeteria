@@ -4,18 +4,18 @@
         <div class="modal-content">
             <form action="add-supply-query.php" method="post">
                 <div class="modal-header d-flex align-items-center bg-primary text-white"><h6
-                        class="modal-title mb-0" id="supplyModalLabel">Inregistrare noua</h6>
+                        class="modal-title mb-0" id="supplyModalLabel">New supplier</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="supplyTitle">Nume</label>
-                        <input type="text" class="form-control" id="supplyName" placeholder="Introduceti nume" autofocus="" name="name" required>
+                        <label for="supplyTitle">Name</label>
+                        <input type="text" class="form-control" id="supplyName" placeholder="name" autofocus="" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="supplyTitle">Cantitate</label>
-                        <input type="text" class="form-control" id="supplyTitle" placeholder="Introduceti cantitate" autofocus="" name="qty" required>
+                        <input type="text" class="form-control" id="supplyTitle" placeholder="Qty" autofocus="" name="qty" required>
                     </div>
                     <div class="form-group">
                         <label for="supplyTitle">Furnizor</label>

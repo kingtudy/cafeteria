@@ -9,7 +9,7 @@
 </div>
 
 
-<div class="container-fluid" style="position: absolute; top: 0;">
+<div class="container-fluid main-index-container">
     <div class="container login-container">
         <div class="login-box">
             <img class="logo-login-left" src="res/img/coffee_icon.png" alt="logo">
