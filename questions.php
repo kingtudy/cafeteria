@@ -7,7 +7,7 @@ include_once "sys.php";
 $query_questions = "select id_question, question, ans1, ans2, ans3 from questions;";
 $questions_data = mysqli_query($link, $query_questions);
 ?>
-<!-- Dev 2 a modificat aici -->
+<!-- Dev 1 a modifica aici -->
 <!-- Indexul este pagina principala => HOME -->
 <div class="container-fluid background-img">
     <div class="container-fluid background-img">
