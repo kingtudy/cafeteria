@@ -14,7 +14,7 @@
                     $query_food = "select id_food, name, type, price, id_menu, description from food where id_food in (select id_food from order_food where id_order=(".$row['id_order']."));";
                     $food_data = mysqli_query($link, $query_food);
                     if(mysqli_num_rows($food_data) > 0) { ?>
-                        <table class="table table-bordered table-hover table-mancare">
+                        <table style="table-layout: fixed;" class="table table-bordered table-hover table-mancare">
                             <thead>
                             <tr>
                                 <th style="text-align: center; font-size: 20px;">NUME</th>

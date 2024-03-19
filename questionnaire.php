@@ -29,9 +29,11 @@ $questions_data = mysqli_query($link, $query_questions);
                                     </div>
                                 </div>
                             </div>
-                        <?php $count++; }
-                    } ?>
-                    <button style="margin: 25px auto 0 auto; display: flex; justify-content: center;" class="btn-login btn btn-warning" type="submit">TRIMITE</button>
+                        <?php $count++; } ?>
+                        <button style="margin: 25px auto 0 auto; display: flex; justify-content: center;" class="btn-login btn btn-warning" type="submit">TRIMITE</button>
+                    <?php } else { ?>
+                        <h1 class="add-shadow table-no-data">Nu exista chestionare</h1>
+                    <?php } ?>
                 </div>
             </div>
         </form>

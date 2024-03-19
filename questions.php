@@ -48,7 +48,7 @@ $questions_data = mysqli_query($link, $query_questions);
                                                 </div>
                                             </a>
                                             <?php include "widgets/modal-edit-question.php"; ?>
-                                            <a class="btn btn-primary btn-forum-delete btn-question" href="delete-question-query.php?id=<?php echo $row[" onclick="return deleteItemQuestion();">
+                                            <a class="btn btn-primary btn-forum-delete btn-question" href="delete-question-query.php?id=<?= $row["id_question"]; ?>" onclick="return deleteItemQuestion();">
                                                 <div class="icon-settings">
                                                     <i style="float: right" class="fas fa-trash-alt"></i>
                                                 </div>

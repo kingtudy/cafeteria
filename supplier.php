@@ -43,7 +43,7 @@ $supply_data = mysqli_query($link, $query_supply);
                             <td class="middle-center-btn">
                                 <a class="btn btn-primary edit-food" href="javascript:void(0)" data-toggle="modal" data-target="#viewSupplyEditList-<?php echo $row["id_supply"]; ?>"><div class="icon-settings"><i class="fas fa-pencil-alt"></i></div></a>
                                 <?php include "widgets/modal-edit-supply.php"; ?>
-                                <a class="btn btn-primary delete-food" href="delete-supply-query.php?id=<?= $row['id']?>" onclick="deleteItemSupply()"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
+                                <a class="btn btn-primary delete-food" href="delete-supply-query.php?id=<?= $row['id_supply']?>" onclick="deleteItemSupply()"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
                             </td>
                         </tr>
                     <?php   }

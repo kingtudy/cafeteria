@@ -57,7 +57,7 @@ if($_SESSION["role"] === 'admin') { ?>
                                 <td class="middle-center-btn">
                                     <a class="btn btn-primary edit-food" href="javascript:void(0)" data-toggle="modal" data-target="#viewOrderEditList-<?php echo $row["id_order"]; ?>"><div class="icon-settings"><i class="fas fa-pencil-alt"></i></div></a>
                                     <?php include "widgets/modal-edit-order.php"; ?>
-                                    <a class="btn btn-primary delete-food" href="delete-order-query.php?id=<?php echo $row[" onclick="return deleteItemOrder();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
+                                    <a class="btn btn-primary delete-food" href="delete-order-query.php?id=<?= $row["id_order"]; ?>" onclick="return deleteItemOrder();"><div class="icon-settings"><i style="float: right" class="fas fa-trash-alt"></i></div></a>
                                 </td>
                             <?php } ?>
                         </tr>
@@ -65,9 +65,13 @@ if($_SESSION["role"] === 'admin') { ?>
                 } ?>
                 </tbody>
             </table>
+        <?php } else {
+        if ($_SESSION["role"] === 'client') { ?>
+            <h1 class="add-shadow table-no-data">Inca un ai plasat o comanda pentru aceasta zi</h1>
         <?php } else { ?>
             <h1 class="add-shadow table-no-data">Nu exista comenzi pentru aceasta zi</h1>
-        <?php } ?>
+        <?php }
+        } ?>
     </div>
 </div>
 

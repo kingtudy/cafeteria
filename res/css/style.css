@@ -92,6 +92,12 @@ select{
     top: 0;
 }
 
+.navbar-toggler {
+    color: white;
+    background: #4c4c9d96;
+    border: 1px dashed white;
+}
+
 .login-box {
     border: 3px solid white;
     width: 60%;
@@ -566,4 +572,8 @@ select{
 .navbar-ico {
     font-size: 20px;
     margin-top: 5px;
+}
+
+.white {
+    color: white !important;
 }

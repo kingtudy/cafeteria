@@ -1,4 +1,7 @@
 @media only screen and (max-width: 768px) {
+    .container-fluid, .container {
+        padding: 0 !important;
+    }
     .main-index-container {
         padding: 0px !important;
     }
@@ -7,6 +10,18 @@
         height: 100%;
         display: flex;
         padding: 0;
+    }
+    .navtop {
+        justify-content: flex-end;
+    }
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
+    .navbar-collapse.collapse {
+        background-image: linear-gradient(to right, #84848480 1px, transparent 1px), linear-gradient(to bottom, #84848480 1px, white 1px);
+        background-size: 20px 20px;
+        margin-top: 3em;
+        border-radius: 0 0 1em 1em;
     }
     .login-box {
         width: 100%;
