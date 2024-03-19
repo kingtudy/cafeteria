@@ -6,7 +6,7 @@ include_once "sys.php";
 $query_questions = "select id_question, question, ans1, ans2, ans3, ans1_cont, ans2_cont, ans3_cont from questions;";
 $questions_data = mysqli_query($link, $query_questions);
 ?>
-
+<?php echo "salut boss"; ?>
 <div class="container-fluid background-img">
     <div class="container-fluid background-img">
         <div class="container">
